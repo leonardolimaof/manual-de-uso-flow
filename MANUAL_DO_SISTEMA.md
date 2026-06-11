@@ -61,31 +61,33 @@ O sistema possui **dois níveis de hierarquia**: o primeiro define o que você p
 ### 2.2 Papéis dentro de um evento
 
 | Papel | Descrição | Pode alocar pessoas? | Pode convidar? |
-|---|---|---|---|
+|---|---|---|---|---|
 | **GERAL** | Coordenador Geral. Supervisiona todas as escolas e toda a equipe do evento. | Sim | Sim |
 | **LOCAL** | Coordenador de uma escola específica. Cuida da equipe da sua escola. | Sim (apenas na sua escola) | Sim (limitado) |
-| **COLABORADOR** | Profissional que trabalha no evento (aplicador, fiscal). | Não | Não |
+| **COLABORADOR** | Profissional que trabalha no evento (aplicador, fiscal). **Não acessa o sistema** - apenas recebe convite por e-mail. | Não | Não |
 | **SCHOOL** | Representante da escola no evento. | Não | Não |
 
 ### 2.3 O que cada um pode fazer
 
-| Funcionalidade | ADMIN | FINANCEIRO | GERAL | LOCAL | COLABORADOR |
-|---|---|---|---|---|---|
-| Criar ou editar Eventos | Sim | - | - | - | - |
-| Cadastrar Escolas | Sim | - | - | - | - |
-| Cadastrar Funções/Cargos | Sim | - | - | - | - |
-| Cadastrar Colaboradores | Sim | - | Sim | Sim | - |
-| Gerar Convites | Sim | - | Sim | Sim | - |
-| Alocar Coordenadores | Sim | - | Sim | - | - |
-| Alocar Colaboradores | Sim | - | Sim | Sim | - |
-| Alocar Candidatos | Sim | - | - | - | - |
-| Confirmar Presença | Sim | - | Sim | Sim | - |
-| Remover Alocação | Sim | - | Sim | Sim | - |
-| Ver Métricas do Evento | Sim | Sim | Sim | Sim | Sim |
-| Gerar Relatório PDF | Sim | - | Sim | Sim | - |
-| Gerar Relatório Planilha | Sim | Sim | Sim | Sim | - |
-| Anexar Edital | Sim | - | - | - | - |
-| Editar Próprio Perfil | Sim | Sim | Sim | Sim | Sim |
+> **Importante**: O **COLABORADOR** (simples) **não acessa o sistema**. Ele apenas recebe o convite por e-mail e responde se aceita ou recusa. Por isso, não há permissões de sistema para ele.
+
+| Funcionalidade | ADMIN | FINANCEIRO | GERAL | LOCAL |
+|---|---|---|---|---|
+| Criar ou editar Eventos | Sim | - | - | - |
+| Cadastrar Escolas | Sim | - | - | - |
+| Cadastrar Funções/Cargos | Sim | - | - | - |
+| Cadastrar Colaboradores | Sim | - | Sim | Sim |
+| Gerar Convites | Sim | - | Sim | Sim |
+| Alocar Coordenadores | Sim | - | Sim | - |
+| Alocar Colaboradores | Sim | - | Sim | Sim |
+| Alocar Candidatos | Sim | - | - | - |
+| Confirmar Presença | Sim | - | Sim | Sim |
+| Remover Alocação | Sim | - | Sim | Sim |
+| Ver Métricas do Evento | Sim | Sim | Sim | Sim |
+| Gerar Relatório PDF | Sim | - | Sim | Sim |
+| Gerar Relatório Planilha | Sim | Sim | Sim | Sim |
+| Anexar Edital | Sim | - | - | - |
+| Editar Próprio Perfil | Sim | Sim | Sim | Sim |
 
 ### 2.4 Regras para convidar pessoas
 
@@ -530,7 +532,7 @@ Arquivo Excel (.xlsx) com:
 
 #### PASSO 16: Gerenciar seu Perfil
 
-**Quem faz:** Todos os usuários
+**Quem faz:** ADMIN, GERAL, LOCAL, FINANCEIRO
 
 **Como fazer:**
 1. No menu lateral, clique em **"Perfil"**
@@ -546,7 +548,7 @@ Arquivo Excel (.xlsx) com:
 
 #### PASSO 17: Visualizar Informações do Evento
 
-**Quem faz:** ADMIN, FINANCEIRO, GERAL, LOCAL, COLABORADOR
+**Quem faz:** ADMIN, FINANCEIRO, GERAL, LOCAL
 
 **Como fazer:**
 1. Na lista de eventos, clique sobre um evento

@@ -80,7 +80,7 @@ O BGTech Flow foi desenvolvido para a **Consulpam**, empresa que realiza concurs
 | Papel | Descrição | Pode alocar? | Pode convidar? |
 |:-----:|-----------|:------------:|:--------------:|
 | 🟣 **GERAL** | Coordenador Geral. Supervisiona todas as escolas e toda a equipe do evento. | ✅ Sim | ✅ Sim |
-| 🟠 **LOCAL** | Coordenador de uma escola específica. Cuida da equipe da sua escola. | ✅ Sim (sua escola) | ✅ Sim (limitado) |
+| 🟠 **LOCAL** | Coordenador **alocado a uma escola específica**. Pode editar os dados da escola, adicionar salas, convidar colaboradores simples e alocá-los nas salas ou área externa. **Não pode** criar novas escolas nem ver escolas de outros locais. | ✅ Sim (apenas na escola que foi alocado) | ✅ Sim (apenas COLABORADOR) |
 | ⚪ **COLABORADOR** | Profissional que trabalha no evento (aplicador, fiscal). É um registro no sistema para controle de alocação — **não tem acesso à plataforma** (não possui login e senha). Pode **ser alocado** e **ser convidado**, mas não pode alocar nem convidar outras pessoas. | ❌ Não | ❌ Não |
 | 🔴 **SCHOOL** | Representante da escola no evento. | ❌ Não | ❌ Não |
 
@@ -93,7 +93,9 @@ O BGTech Flow foi desenvolvido para a **Consulpam**, empresa que realiza concurs
 | Funcionalidade | 🟢 ADMIN | 🔵 FINANCEIRO | 🟣 GERAL | 🟠 LOCAL |
 |----------------|:--------:|:-------------:|:--------:|:--------:|
 | Criar ou editar Eventos | ✅ | — | — | — |
-| Cadastrar Escolas | ✅ | — | — | — |
+| Cadastrar Escolas | ✅ | — | ✅ | — |
+| Editar dados da Escola | ✅ | — | ✅ | ✅ |
+| Adicionar Salas | ✅ | — | ✅ | ✅ |
 | Cadastrar Funções/Cargos | ✅ | — | — | — |
 | Cadastrar Colaboradores | ✅ | — | ✅ | ✅ |
 | Gerar Convites | ✅ | — | ✅ | ✅ |
@@ -306,7 +308,7 @@ Mostra todos os convites que você gerou, com:
 
 #### 🏫 PASSO 5 — Cadastrar um Local (Escola)
 
-| Quem faz | 🟢 Somente ADMIN |
+| Quem faz | 🟢 ADMIN, 🟣 GERAL |
 |----------|:----------------:|
 | 🎯 **Objetivo** | Cadastrar uma escola que participará do evento |
 
@@ -431,6 +433,8 @@ Na página de detalhes do local:
 4. Clique em **"Convidar"**
 
 > ⚠️ **Regras importantes:**
+> - 🟠 **LOCAL** só pode convidar para **Colaborador Simples** (COLABORADOR)
+> - 🟣 **GERAL** pode convidar para LOCAL e COLABORADOR
 > - Se a função for **GERAL** ou **LOCAL**, o **e-mail é obrigatório**
 > - Para **COLABORADOR**, o e-mail é opcional
 > - Uma pessoa só pode ser convidada **uma vez** para o mesmo evento

@@ -81,14 +81,14 @@ O BGTech Flow foi desenvolvido para a **Consulpam**, empresa que realiza concurs
 |:-----:|-----------|:------------:|:--------------:|
 | 🟣 **GERAL** | Coordenador Geral. Supervisiona todas as escolas e toda a equipe do evento. | ✅ Sim | ✅ Sim |
 | 🟠 **LOCAL** | Coordenador de uma escola específica. Cuida da equipe da sua escola. | ✅ Sim (sua escola) | ✅ Sim (limitado) |
-| ⚪ **COLABORADOR** | Profissional que trabalha no evento (aplicador, fiscal). ❌ **Não acessa o sistema** — apenas recebe convite por e-mail. | ❌ Não | ❌ Não |
+| ⚪ **COLABORADOR** | Profissional que trabalha no evento (aplicador, fiscal). É um registro no sistema para controle de alocação — **não tem acesso à plataforma** (não possui login e senha). | ❌ Não | ❌ Não |
 | 🔴 **SCHOOL** | Representante da escola no evento. | ❌ Não | ❌ Não |
 
 ---
 
 ### 📋 O que cada um pode fazer
 
-> ⚠️ **Importante**: O **COLABORADOR** (simples) **não acessa o sistema**. Ele apenas recebe o convite por e-mail e responde se aceita ou recusa. Por isso, não há permissões de sistema para ele.
+> ⚠️ **Importante**: O **COLABORADOR** (simples) **não acessa a plataforma** — ele não possui login e senha. É apenas um registro no sistema para controle de alocação. Por isso, não há permissões de sistema para ele.
 
 | Funcionalidade | 🟢 ADMIN | 🔵 FINANCEIRO | 🟣 GERAL | 🟠 LOCAL |
 |----------------|:--------:|:-------------:|:--------:|:--------:|

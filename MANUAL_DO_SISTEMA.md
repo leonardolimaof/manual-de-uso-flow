@@ -26,8 +26,7 @@
 | 10 | [Módulo de Candidatos](#10--módulo-de-candidatos) |
 | 11 | [Módulo de Funções/Cargos](#11--módulo-de-funçõescargos) |
 | 12 | [Módulo de Relatórios](#12--módulo-de-relatórios) |
-| 13 | [Aplicativo Mobile](#13--funcionalidades-do-aplicativo-mobile) |
-| 14 | [Glossário](#14--glossário) |
+| 13 | [Glossário](#13--glossário) |
 
 ---
 
@@ -969,28 +968,7 @@ Arquivo com dados organizados em colunas, ideal para:
 
 ---
 
-## 1️⃣3️⃣ — Funcionalidades do Aplicativo Mobile
-
-O aplicativo para **celular** do BGTech Flow oferece as seguintes funções:
-
-### 📱 Telas Principais
-
-| Tela | Função |
-|:----:|--------|
-| 🔑 **Entrar** | Login no sistema |
-| 🎯 **Selecionar Evento** | Escolher o evento |
-| 📊 **Painel Principal** | Visão geral |
-| 🏫 **Locais** | Consultar escolas e salas |
-| 👥 **Alocações** | Consultar profissionais alocados |
-| 🎒 **Candidatos** | Visualizar candidatos |
-| 👤 **Perfil** | Editar dados e trocar senha |
-| ✅ **Confirmação de Convite** | Aceitar ou recusar convites |
-
-> 💡 **Observação:** O aplicativo é **complementar** ao sistema web. Ele é indicado para **consultas e operações básicas em campo**. Para fazer **cadastros, alocações e relatórios** completos, use o sistema pelo computador.
-
----
-
-## 1️⃣4️⃣ — Glossário
+## 1️⃣3️⃣ — Glossário
 
 | Termo | 🔤 Significado |
 |-------|----------------|

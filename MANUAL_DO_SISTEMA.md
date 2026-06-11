@@ -26,7 +26,8 @@
 | 10 | [Módulo de Candidatos](#10--módulo-de-candidatos) |
 | 11 | [Módulo de Funções/Cargos](#11--módulo-de-funçõescargos) |
 | 12 | [Módulo de Relatórios](#12--módulo-de-relatórios) |
-| 13 | [Glossário](#13--glossário) |
+| 13 | [Módulo Financeiro](#13--módulo-financeiro) |
+| 14 | [Glossário](#14--glossário) |
 
 ---
 

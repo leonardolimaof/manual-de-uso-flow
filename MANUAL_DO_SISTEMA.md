@@ -70,7 +70,7 @@ O BGTech Flow foi desenvolvido para a **Consulpam**, empresa que realiza concurs
 | Papel | Acesso |
 |:----:|--------|
 | 🟢 **ADMIN** | **Acesso total.** Pode criar e editar eventos, cadastrar escolas, definir funções, alocar profissionais, gerar convites e ver dados financeiros. |
-| 🔵 **FINANCEIRO** | **Visualização e relatórios.** Pode ver informações do evento e gerar relatórios em planilha. ❌ **Não pode** alocar ninguém nem gerenciar convites. |
+| 🔵 **FINANCEIRO** | **Acesso financeiro.** Visualiza eventos, escolas, colaboradores e alocações, mas **não pode criar, editar ou alocar nada**. Gera relatórios em planilha com dados bancários (chave PIX) para pagamento. ❌ **Não pode** alocar, convidar, editar cadastros, nem acessar o Dashboard, Funções ou Candidatos. |
 | 🟡 **PARTICIPANTE** | **Acesso básico.** Pode ver seus eventos, seu perfil e suas informações. |
 
 ---
@@ -105,6 +105,8 @@ O BGTech Flow foi desenvolvido para a **Consulpam**, empresa que realiza concurs
 | Confirmar Presença | ✅ | — | ✅ | ✅ |
 | Remover Alocação | ✅ | — | ✅ | ✅ |
 | Ver Métricas do Evento | ✅ | ✅ | ✅ | ✅ |
+| **Ver valor base do evento** | ✅ | — | ✅ | ✅ |
+| **Ver chave PIX dos colaboradores** | ✅ | ✅ | ✅ | ✅ |
 | Gerar Relatório PDF | ✅ | — | ✅ | ✅ |
 | Gerar Relatório Planilha | ✅ | ✅ | ✅ | ✅ |
 | Anexar Edital | ✅ | — | — | — |
@@ -649,10 +651,16 @@ Na página de detalhes do local:
 
 **📊 Relatório em Planilha (.xlsx)** *(para FINANCEIRO)*
 
+> 💡 O **FINANCEIRO** só pode gerar relatórios **em planilha** — não tem acesso ao PDF.
+
 | Item | Descrição |
 |------|-----------|
-| 📋 **Dados** | Dados organizados em colunas |
-| 💰 **Finalidade** | Controle financeiro e folha de pagamento |
+| 📋 **Dados** | Nome do colaborador, função, escola, sala, **chave PIX**, valor a receber (baseado no valor da função) |
+| 💰 **Finalidade** | Controle financeiro e preparação da **folha de pagamento** |
+| 📅 **Período** | Filtro por data de alocação |
+| 📐 **Formato** | Arquivo `.xlsx` (Excel), já formatado com colunas para calcular totais |
+
+**Para o FINANCEIRO, o relatório de planilha é a ferramenta principal de trabalho** — ele contém os dados bancários (chave PIX) e os valores calculados para cada colaborador, permitindo organizar o pagamento de toda a equipe do evento.
 
 ---
 
@@ -691,6 +699,8 @@ Na página de detalhes do local:
 2. A página de detalhes mostra:
 
 ---
+
+> 👁️ **FINANCEIRO**: vê os detalhes do evento, mas os campos de **Valor previsto** e **Valor gasto** ficam ocultos — essas informações são exclusivas do **ADMIN**.
 
 **📋 Detalhes do Evento**
 
@@ -843,6 +853,16 @@ Gerenciados pelo ADMIN. Exemplos: *"Térreo"*, *"1º Andar"*, *"2º Andar"*.
 | 🏦 **Conta** | Número da conta | ❌ |
 | 💳 **Chave PIX** | Chave para pagamento | ❌ |
 
+### 👁️ Visão do FINANCEIRO na tela de Colaboradores
+
+Quando o **FINANCEIRO** acessa a página de Colaboradores de um local:
+
+- ✅ **Visualiza** a lista completa de colaboradores com nome, CPF, função, sala e **chave PIX**
+- ❌ **Não vê** os botões de ação (alocar, remover, editar)
+- ❌ **Não vê** a coluna de área de alocação (sala / área externa)
+
+> 🎯 A tela do financeiro é focada em **consulta e extração de dados bancários** para pagamento, sem opções de edição ou alocação.
+
 ---
 
 ## 8️⃣ — Módulo de Convites
@@ -964,15 +984,57 @@ Documento formatado contendo:
 | 📋 **Corpo** | Nome do evento + lista de colaboradores com funções e salas |
 | 🖨️ **Rodapé** | Data de impressão e usuário que gerou |
 
+> 🔵 **FINANCEIRO** não tem acesso ao relatório em PDF.
+
 ### 📊 Relatório em Planilha (Excel)
 Arquivo com dados organizados em colunas, ideal para:
 - 💰 Controle financeiro
 - 📋 Folha de pagamento
 - 🔄 Processamento de dados
 
+**Dados incluídos:** nome do colaborador, CPF, função, escola, sala, **chave PIX** e valor a receber.
+
+> 📌 Para o **FINANCEIRO**, este é o principal instrumento de trabalho — a planilha já vem com os dados bancários de cada colaborador para organizar os pagamentos.
+
 ---
 
-## 1️⃣3️⃣ — Glossário
+## 1️⃣3️⃣ — Módulo Financeiro
+
+> ⚠️ O módulo financeiro **não é uma página separada** no sistema. São as funcionalidades disponíveis para o papel **🔵 FINANCEIRO** dentro das telas existentes.
+
+### 👁️ O que o FINANCEIRO pode ver
+
+| Tela | O que vê |
+|------|----------|
+| 🏠 **Selecionar Evento** | Lista de eventos onde foi cadastrado |
+| 👥 **Colaboradores** | Lista completa com nome, CPF, função, sala e **chave PIX** |
+| 🏫 **Locais** | Escolas do evento (apenas visualização) |
+| 📊 **Métricas** | Indicadores e gráficos do evento |
+| 📝 **Perfil** | Seus próprios dados (pode editar) |
+
+### ❌ O que o FINANCEIRO **não** pode ver/fazer
+
+| Funcionalidade | Motivo |
+|----------------|--------|
+| 📊 **Painel Principal (Dashboard)** | Não tem acesso — vai direto para Colaboradores |
+| ➕ **Criar ou editar eventos** | Apenas leitura |
+| ➕ **Cadastrar escolas / salas** | Apenas leitura |
+| ➕ **Cadastrar funções** | Módulo bloqueado |
+| ➕ **Cadastrar colaboradores** | Apenas leitura |
+| 🎒 **Candidatos** | Módulo bloqueado |
+| 📄 **Relatório em PDF** | Gera apenas planilha |
+| 🔗 **Convidar pessoas** | Não pode gerar convites |
+| 📌 **Alocar ou remover alocações** | Não pode alocar ninguém |
+| ✏️ **Editar dados de escolas ou colaboradores** | Apenas visualização |
+| 💰 **Valor base / valor gasto do evento** | Informação visível apenas para ADMIN |
+
+### 💳 Dados bancários visíveis
+
+O FINANCEIRO enxerga a **chave PIX** de cada colaborador na tela de Colaboradores. Essa informação não aparece para os demais papéis (ADMIN, GERAL, LOCAL) na mesma tela — o foco deles é a alocação, não o pagamento.
+
+---
+
+## 1️⃣4️⃣ — Glossário
 
 | Termo | 🔤 Significado |
 |-------|----------------|
@@ -993,6 +1055,10 @@ Arquivo com dados organizados em colunas, ideal para:
 | **Valor Base** | Quanto o evento pode gastar no total |
 | **Equipe Necessária** | Quantas pessoas são precisas na escola |
 | **Presença** | Confirmação de que a pessoa compareceu |
+| **FINANCEIRO** | Papel do sistema que visualiza dados e gera relatórios financeiros |
+| **Valor Gasto** | Quanto do orçamento já foi utilizado no evento |
+| **Chave PIX** | Chave bancária do colaborador para recebimento de pagamento |
+| **Relatório em Planilha** | Arquivo Excel com dados para controle de pagamento |
 
 ---
 
